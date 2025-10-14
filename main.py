@@ -37,6 +37,11 @@ def main():
 
         updatable.update(dt)
         for a in asteroids:
+            for b in shorts:
+                if a.collide(b):
+                    a.kill()
+                    b.kill()
+
             if a.collide(player):
                 print("Game over!")
                 sys.exit()

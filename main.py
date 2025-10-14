@@ -39,7 +39,7 @@ def main():
         for a in asteroids:
             for b in shorts:
                 if a.collide(b):
-                    a.kill()
+                    a.split()
                     b.kill()
 
             if a.collide(player):

@@ -15,13 +15,16 @@ def main():
             if event.type == pygame.QUIT:
                 pygame.quit()
                 return # Exit the program
-
+                
+        player.update(dt)
         screen.fill("black")
         player.draw(screen)
+        
+        # -- Refresh the display ---
         pygame.display.flip()
         time = clock.tick(60)
         dt = time / 1000  # Convert milliseconds to seconds
-       
+        
 
 
 
